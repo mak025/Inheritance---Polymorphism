@@ -103,9 +103,10 @@ namespace Device_Dynasty
         /// <returns>A string containing the laptop's details.</returns>
         public string getLaptopDetails()
         {
-            return "Laptop OS: " + laptopOS + "\n" +
-                   "Laptop Version: " + laptopProcessor + "\n" +
-                   "Screen Size: " + laptopScreenSize + "\n";
+            return getDeviceDetails() + "\n" +                  // This calls the getDeviceDetails method from
+                   "Laptop OS: " + laptopOS + "\n" +            // the base class to get the common device details.
+                   "Laptop Processor: " + laptopProcessor + "\n" +
+                   "Laptop Screen Size: " + laptopScreenSize + "\n";
         }
     }
 
@@ -147,8 +148,9 @@ namespace Device_Dynasty
         /// <returns>A string containing the mobile device's details.</returns>
         public string getMobileDetails()
         {
-            return "Mobile OS: " + mobileOS + "\n" +
-                   "Mobile Version: " + mobileVersion;
+            return getDeviceDetails() + "\n" +                  // This calls thegetDeviceDetails method from
+                   "Mobile OS: " + mobileOS + "\n" +            // the base class to get the common device details.
+                   "Mobile Version: " + mobileVersion + "\n";
         }
     }
 }
